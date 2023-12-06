@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+{% endblock %}
+
+{% block body %}
+    <h1>Spill</h1>
+    
+    <form action="#" method="get">
+        <label for="nettverksadresse">Nettverksadresse:</label>
+        <input type="text" id="nettverksadresse" name="nettverksadresse" readonly value="{{ nettverksadresse }}"><br><br>
+    
+        <label for="kringkastingsadresse">Kringkastingsadresse:</label>
+        <input type="text" id="kringkastingsadresse" name="kringkastingsadresse" readonly value="{{ kringkastingsadresse }}"><br><br>
+    
+        <label for="antallverter">Antall verter:</label>
+        <input type="text" id="antallverter" name="antallverter" readonly value="{{ antallverter }}"><br><br>
+    
+        <label for="cidr">IP-adresse i CIDR-notasjon:</label>
+        <input type="text" id="cidr" name="cidr" readonly value="{{ cidr }}"><br><br>
+    </form>
+    
+        
+        <form action="/spill">
+            <input type="submit" value="Prøv nytt problem">
+        </form>
+{% endblock %}

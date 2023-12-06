@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+{% endblock %}
+
+{% block body %}
+    <h1>Spill</h1>
+        
+    <p>IP-adresse: {{ ip_adresse }}</p>
+    <p>Subnetmaske: {{ subnet_adresse }}</p>
+
+    <form action="/sjekk">
+        <label for="nettverksadresse">Nettverksadresse:</label>
+        <input type="text" id="nettverksadresse" name="nettverksadresse" required autocomplete="off" autofocus placeholder="Oppgi svaret i formatet 'X.X.X.X'"><br><br>
+
+
+        <label for="kringkastingsadresse">Kringkastingsadresse:</label>
+        <input type="text" id="kringkastingsadresse" name="kringkastingsadresse" required autocomplete="off" autofocus placeholder="Oppgi svaret i formatet 'X.X.X.X'"><br><br>
+
+        <label for="antallverter">Antall brukbare verter:</label>
+        <input type="text" id="antallverter" name="antallverter" required autocomplete="off" autofocus placeholder="Oppgi svaret i formatet 'XXX'"><br><br>
+
+        <label for="cidr">IP-adresse i CIDR-notasjon:</label>
+        <input type="text" id="cidr" name="cidr" required autocomplete="off" autofocus placeholder="Oppgi svaret i formatet 'X.X.X.X/XX'"><br><br>
+
+        <input type="submit" value="Sjekk svar">
+    </form>
+
+        
+        
+        <form action="/spill">
+            <input type="submit" value="Prøv nytt problem">
+        </form>
+{% endblock %}

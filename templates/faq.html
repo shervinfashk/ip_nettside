@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<h1>Ofte Stilte Spørsmål (FAQ)</h1>
+
+<h2>Hva er en nettverksadresse?</h2>
+<p>En nettverksadresse identifiserer det spesifikke nettverket som en enhet er tilkoblet. I IPv4 bestemmes nettverksadressen av de første bitene i IP-adressen og subnetmasken.</p>
+<p>Eksempel: IP-adresse: 192.168.1.10, Subnetmaske: 255.255.255.0, Nettverksadresse: 192.168.1.0</p>
+
+<h2>Hva er en kringkastingsadresse?</h2>
+<p>Kringkastingsadressen er den høyeste adressen i et subnett og brukes til å sende data til alle enheter i det spesifikke subnettet.</p>
+<p>Eksempel: IP-adresse: 192.168.1.0, Subnetmaske: 255.255.255.0, Kringkastingsadresse: 192.168.1.255</p>
+
+<h2>Hva er brukbare verter?</h2>
+<p>Brukbare verter refererer til individuelle enheter i et subnett som kan ha egne tildelte IP-adresser. Antallet brukbare verter beregnes ved å trekke fra nettverksadressen, kringkastingsadressen og eventuelle reserverte adresser fra det totale antallet adresser i subnettet.</p>
+<p>Eksempel: IP-område: 192.168.1.0 til 192.168.1.255, Nettverksadresse: 192.168.1.0, Kringkastingsadresse: 192.168.1.255, Antall brukbare verter: 254</p>
+
+<h2>Hva er CIDR-notasjon?</h2>
+<p>CIDR (Classless Inter-Domain Routing) er en metode for å representere og beskrive IP-adresseblokker på en mer effektiv måte. CIDR-notasjonen inkluderer IP-adressen etterfulgt av skråstreken og CIDR-prefiksen, som angir hvor mange biter som tilhører subnettet.</p>
+<p>Eksempel: IP-adresse: 192.168.1.0, Subnetmaske: 255.255.255.0, CIDR-notasjon: 192.168.1.0/24</p>
+
+{% endblock %}
