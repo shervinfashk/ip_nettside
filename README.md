@@ -5,6 +5,6 @@ Disclaimer: Jeg har brukt AI til å lage grunnstrukturen for HTML og CSS på net
 
 ## Bruk
 
-Nettsiden liger ute på følgende lenke: shervinf.pythonanywhere.com
+Nettsiden er tilgjengelig [her](http://shervinf.pythonanywhere.com).
 
 ---
